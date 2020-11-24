@@ -15,26 +15,30 @@
 
 /*  HEADER  */
 header {
-    height: 12vh;
+    position: relative;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+   
 }
+
 header img {
-    padding-left: 10px;
+    padding: 10px 0 10px 10px;
 }
-header nav, header nav a {
-    width: 35%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: center;
+header nav{
     color: #3082FD;
+    width: 800px;
+    display: flex;justify-content: center;
 }
 header nav a {
-    height: 100%;
-    width: 33%;
     text-decoration: none;
+    width: 200px;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #3082FD;
+
 }
 header nav .contenu:focus  {
     border-top: 3px solid #0065FC;
@@ -42,9 +46,57 @@ header nav .contenu:focus  {
 }
 
 #btn-inscription {
+    position: absolute;
+    top: 24px;
+    left: 90%;
+    text-decoration: none;
     font-family: Raleway-bold;
     color: #0065FC;
     font-weight: bolder;
+    
+}
+
+@media (max-width: 920px) {
+    header nav{
+        color: #3082FD;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        border-bottom: none
+    }
+    header nav .contenu  {
+        border-bottom: 3px solid #bebebe;
+    }
+    header nav .contenu:focus  {
+        border: none;
+        border-bottom: 3px solid #0065FC;
+        color: #3082FD;
+    }
+
+
+
+
+header nav a {
+    text-decoration: none;
+    width: 50%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #3082FD;
+
+}
+
+#btn-inscription {
+    position: absolute;
+    left: 78%;
+    text-decoration: none;
+    font-family: Raleway-bold;
+    color: #0065FC;
+    font-weight: bolder;
+    
+}
+
 }
 
 /*   SECTION FILTRE   */
@@ -53,13 +105,13 @@ header nav .contenu:focus  {
 } */
 
 .titre h2 , .titre p{
-    margin: 5px 0px;
+    margin: 15px 0px 15px 15px;
 }
 
 .recherche {
-    margin: 20px 0px;
+    margin: 25px 0px 25px 15px;
     width: 100%;
-    height: 5vh;
+    height: 7vh;
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -78,10 +130,16 @@ header nav .contenu:focus  {
     border-right: none;
 }
 .recherche input {
+    width: 200px;
     border: 1px solid #efefef;
     outline-style: none;
     padding-left: 10px;
     font-family: Raleway-bold;
+}
+.recherche input::placeholder{
+    font-family: Raleway-bold;
+    font-size: 1.5em;
+    color: #000000;
 }
 .recherche button  {
     background-color: #0065FC;
@@ -99,7 +157,7 @@ header nav .contenu:focus  {
 
 
 .filtres {
-    width: 60%;
+    width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
@@ -107,12 +165,12 @@ header nav .contenu:focus  {
     font-family: Raleway-bold;
 }
 .filtres > p {
-    margin-right: 30px;
+    margin: 0px 0px 5px 15px;
     font-family: Raleway-bold;
 }
 .filtre-element {
     height: 6vh;
-    margin: 0em 1em;
+    margin: 5px 0 5px 15px;
     display: flex;
     font-size: 100%;
     justify-content: center;
@@ -152,12 +210,16 @@ header nav .contenu:focus  {
     border-radius: 50%;
     color: #3082FD;
 }
+@media (max-width: 920px) {
+    .filtres > p {
+        width: 100%;
+    }
+}
 
 .info {
-    margin: 1em 0;
-    height: 5vh;
+    margin: 15px 0 15px 15px;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: center;
 
@@ -171,7 +233,7 @@ header nav .contenu:focus  {
     border-radius: 50%;
     background-color: #fff;
     color: #0065FC;
-    font-size: 1em;
+    font-size: 12px;
     border: 1px solid #bebebe;
 }
 .info p {
@@ -272,6 +334,49 @@ footer {
         text-decoration: none;
         color: #000000;
         margin: 10px 100px 10px 0;
+        display: flex;
+        flex-flow: column nowrap;
+        width: fit-content;
+        text-align: left;
+
+}
+.footer-element h3 {
+  margin-bottom: 15px;
+  text-align: left;
+}
+.apropos {
+  
+}
+
+.noshebergements {
+
+    
+}
+
+.assistance{
+    margin: 10px 100px 10px 0;
+    display: flex;
+    flex-flow: column nowrap;
+    width: fit-content;
+    text-align: left;
+
+}
+.footer-element h3 {
+  margin-bottom: 15px;
+  text-align: left;
+}
+.apropos {
+  
+}
+
+.noshebergements {
+
+    
+}
+
+.assistance{
+
+   margin: 10px 100px 10px 0;
         display: flex;
         flex-flow: column nowrap;
         width: fit-content;

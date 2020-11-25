@@ -99,11 +99,6 @@ header nav a {
 
 }
 
-/*   SECTION FILTRE   */
-/* .filtre-section {
-    padding-left: 10px;
-} */
-
 .titre h2 , .titre p{
     margin: 15px 0px 15px 15px;
 }
@@ -155,6 +150,8 @@ header nav a {
     cursor: pointer;
 }
 
+
+/*   SECTION FILTRE   */
 
 .filtres {
     width: 100%;
